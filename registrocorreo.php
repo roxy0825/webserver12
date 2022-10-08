@@ -6,7 +6,7 @@ if (isset($_REQUEST['usr']) && isset($_REQUEST['clave']) && isset($_REQUEST['nom
 	$correo = $_REQUEST['correo'];
 	$clave = $_REQUEST['clave'];
 	$cnx =  mysqli_connect("localhost","root","","empresa") or die("Ha sucedido un error inexperado en la conexion de la base de datos");
-	$result = mysqli_query($cnx,"select correo from usuarios where correo = '$correo'");
+	$result = mysqli_query($cnx,"select usr from usuarios where usr = '$usr'");
 	if (mysqli_num_rows($result)==0)
 	{
 		mysqli_query($cnx,"INSERT INTO usuarios (usr,nombre,correo,clave) VALUES ('$usr','$nombre','$correo','$clave')");	
