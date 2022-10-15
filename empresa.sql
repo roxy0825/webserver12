@@ -19,6 +19,9 @@ INSERT INTO `usuarios` (`usr`, `nombre`, `correo`, `clave`, `activo`) VALUES
 ('sebass', 'Sebastian Orozco', 'sebitas@gmail.com', '456', 'si'),
 ('tatis', 'Tatiana Gamboa', 'tata@gmail.com', '789', 'si');
 
+CREATE DATABASE agenda;
+USE empresa
+
 CREATE TABLE `agenda` (
   `ID` INT NOT NULL,
   `TITULO` VARCHAR(45) NOT NULL,

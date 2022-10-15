@@ -3,7 +3,7 @@ if (isset($_REQUEST['correo']) && isset($_REQUEST['clave']))
 {
     $correo=$_REQUEST['correo'];
     $clave=$_REQUEST['clave'];
-    $cnx =  mysqli_connect("localhost","root","admin","Empresa");
+    $cnx =  mysqli_connect("localhost","root","","Empresa");
     $res=$cnx->query("select * from agenda where correo = '$correo' and clave = '$clave'");
     $json = array();
 		foreach ($res as $row) 

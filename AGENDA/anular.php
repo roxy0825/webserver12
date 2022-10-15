@@ -2,7 +2,7 @@
 if (isset($_REQUEST['ID']))
 {
 	$id=$_REQUEST['ID'];
-	$cnx =  mysqli_connect("localhost","root","admin","Empresa") or die("Ha sucedido un error inexperado en la conexion de la base de datos");
+	$cnx =  mysqli_connect("localhost","root","","Empresa") or die("Ha sucedido un error inexperado en la conexion de la base de datos");
 	$result = mysqli_query($cnx,"select id from agenda where id = '$id'");
 	if (mysqli_num_rows($result)>0)
 	{
